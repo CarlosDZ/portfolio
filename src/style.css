@@ -1,0 +1,100 @@
+:root{
+    --terminal-background: #1C1C1C;
+    --terminal-text: #33FF00;
+    --font: 'IBM-VGA-8x16';
+}
+
+@font-face {
+    font-family: 'IBM-VGA-8x16';
+    src: url('../public/fonts/Px437_IBM_VGA_8x16.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    font-family: var(--font);
+    color: var(--terminal-text);
+    background-color: var(--terminal-background);
+    padding: 1%;
+}
+
+button{
+    all: unset;
+}
+h1{
+    all: unset;
+}
+h2{
+    all:unset;
+}
+
+.home{
+    background-color: var(--terminal-background);
+    h3{
+        text-align: center;
+        font-size: 2.2rem;
+        margin: 0;
+    }
+    h1{
+        font-size: 3rem;
+    }
+
+    .user{
+        font-size: 1.5rem;
+    }
+
+    p{
+        font-size: 1.3rem;
+    }
+}
+
+#buttons{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    button{
+        color: var(--terminal-text);
+        background: var(--terminal-background);
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+        width: fit-content;
+        padding-left: 0.4rem;
+        padding-right: 12rem;
+    }
+
+    button::before{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 215%;
+        height: 100%;
+        background: linear-gradient(45deg, var(--terminal-text) 50%, var(--terminal-background) 50%);
+        transition: all 0.9s ease;
+        z-index: 0;
+        opacity: 0;
+
+    }
+
+    button:hover::before {
+        left: 0%;
+        opacity: 1;
+    }
+    button span,
+    button h1 {
+        position: relative;
+        z-index: 1;
+        margin: 0;
+        transition: color 0.5s ease;
+        font-size: 4.2rem;
+    }
+    
+    button:hover span,
+    button:hover h1 {
+        color: var(--terminal-background);
+    }
+}
