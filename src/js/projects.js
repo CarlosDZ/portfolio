@@ -56,6 +56,11 @@ export async function writeProjectPage(){
     await writeElement(terminalHeaderText, "terminalHeaderText");
     await writeElement(promptText, "promptText");
     await writeElement(responseText, "responseText");
-    createProjectButton("beer_with_no_background.png", "TPV Hosteler-a", ["Java Swing","MySQL"], null);
-    createProjectButton("vault_logo_with_no_background.png", "Vault", ["Web Design","Frontend"], null);
+    createProjectButton("beer_with_no_background.png", "TPV Hosteler-a", ["Java Swing","MySQL"], "https://github.com/javiifu/Hosteler-a.git");
+    createProjectButton("vault_logo_with_no_background.png", "Vault", ["Web Design","Frontend"], "https://github.com/CarlosDZ/Vault.git");
+    createProjectButton("magic_card_with_no_background.png", "Spain cEDH (TFG)", ["Fullstack","MongoDB"], "https://github.com/CarlosDZ/TFG-Web-cEDH.git");
+    createProjectButton("magnifying_glass_with_no_background.png", "Buscador de proveedores", ["Java Swing","MySQL"], "https://github.com/CarlosDZ/buscador_proveedores_belizon.git");
+    createProjectButton("nodoLab_with_no_background.png", "nodoLab Coworking", ["Fullstack","PostgreSQL"], "https://github.com/patatavolc/nodoLab.git");
+    createProjectButton("nvim_with_no_background.png", "My Nvim Build", ["Lua","Config Files"], "https://github.com/patatavolc/nvim-personal-build.git");
+
 }
