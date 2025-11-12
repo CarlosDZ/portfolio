@@ -1,4 +1,4 @@
-const typingSpeed = 32; //ms
+const typingSpeed = 22; //ms
 
 export const writeElement = (text, elementID) => {
     return new Promise((resolve) => {

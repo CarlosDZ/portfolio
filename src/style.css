@@ -140,3 +140,15 @@ h2{
     top: -5px;
     left: -5px;
 }
+
+
+.project_container h2{
+    font-size: 3rem;
+    padding: 0px;
+}
+.project_container li{
+    font-size: 1.7rem;
+}
+.project_container ul{
+    margin: 0px;
+}
