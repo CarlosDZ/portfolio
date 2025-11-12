@@ -137,9 +137,6 @@ h2{
 }
 #imagen_proyecto{
     position: absolute;
-    top: 0;
-    left: 0;
-}
-
-#boton_presionable_proyecto:active #imagen_proyecto{
+    top: -5px;
+    left: -5px;
 }

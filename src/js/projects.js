@@ -25,13 +25,16 @@ function createProjectButton(image_name, name, technologies, redirect_url) {
         const btn = projectSection.querySelector("#boton_presionable_proyecto");
         btn.addEventListener("mousedown", () => {
             imagen_boton.src = pressed_button_image;
+            imagen_proyecto.style.transform = "translate(10px, 10px)";
         });
         btn.addEventListener("mouseup", () => {
             imagen_boton.src = unpressed_button_image;
             window.open(redirect_url, "_blank");
+            imagen_proyecto.style.transform = "translate(-0px, 0px)";
         });
         btn.addEventListener("mouseleave", () => {
             imagen_boton.src = unpressed_button_image;
+            imagen_proyecto.style.transform = "translate(0px, 0px)";
         });
 
         projectSection.querySelector("#project_title").textContent = name;
