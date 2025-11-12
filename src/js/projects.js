@@ -5,7 +5,7 @@ const images_route = '/public/imgs/projects/';
 import {writeElement} from './utils/prompt_writer.js';
 
 const terminalHeaderText = "<CarlosDZ's Console>";
-const promptText = "(carlos@portfolio ~) $  cat project_welcome.txt; ls projects";
+const promptText = "(carlos@portfolio ~/Projects) $  cat project_welcome.txt; ls";
 const responseText = ">> Those are the public projects that i've worked on!. If any of them awakes your interest, just push the button and you will be redirected to his page:";
 
 function createProjectButton(image_name, name, technologies, redirect_url) {
@@ -50,17 +50,24 @@ function createProjectButton(image_name, name, technologies, redirect_url) {
     })
     .catch(err => console.log("Error creating project button:", err));
 }
-
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
 
 export async function writeProjectPage(){
     await writeElement(terminalHeaderText, "terminalHeaderText");
     await writeElement(promptText, "promptText");
     await writeElement(responseText, "responseText");
     createProjectButton("beer_with_no_background.png", "TPV Hosteler-a", ["Java Swing","MySQL"], "https://github.com/javiifu/Hosteler-a.git");
+    await sleep(500);
     createProjectButton("vault_logo_with_no_background.png", "Vault", ["Web Design","Frontend"], "https://github.com/CarlosDZ/Vault.git");
+    await sleep(500);
     createProjectButton("magic_card_with_no_background.png", "Spain cEDH (TFG)", ["Fullstack","MongoDB"], "https://github.com/CarlosDZ/TFG-Web-cEDH.git");
+    await sleep(500);
     createProjectButton("magnifying_glass_with_no_background.png", "Buscador de proveedores", ["Java Swing","MySQL"], "https://github.com/CarlosDZ/buscador_proveedores_belizon.git");
+    await sleep(500);
     createProjectButton("nodoLab_with_no_background.png", "nodoLab Coworking", ["Fullstack","PostgreSQL"], "https://github.com/patatavolc/nodoLab.git");
+    await sleep(500);
     createProjectButton("nvim_with_no_background.png", "My Nvim Build", ["Lua","Config Files"], "https://github.com/patatavolc/nvim-personal-build.git");
 
 }
