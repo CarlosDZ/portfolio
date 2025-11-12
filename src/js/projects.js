@@ -5,7 +5,7 @@ const images_route = '/public/imgs/projects/';
 import {writeElement} from './utils/prompt_writer.js';
 
 const terminalHeaderText = "<CarlosDZ's Console>";
-const promptText = "(carlos@portfolio ~/Projects) $  cat project_welcome.txt; ls";
+const promptText = "(carlos@portfolio ~/Projects) $  cat project_welcome.txt; ls *.project";
 const responseText = ">> Those are the public projects that i've worked on!. If any of them awakes your interest, just push the button and you will be redirected to his page:";
 
 function createProjectButton(image_name, name, technologies, redirect_url) {
