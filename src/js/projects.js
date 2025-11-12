@@ -3,10 +3,12 @@ const pressed_button_image = '/public/imgs/projects/pressed_button_with_backgrou
 const images_route = '/public/imgs/projects/';
 
 import {writeElement} from './utils/prompt_writer.js';
+import { show } from './main.js';
 
 const terminalHeaderText = "<CarlosDZ's Console>";
-const promptText = "(carlos@portfolio ~/Projects) $  cat project_welcome.txt; ls *.project";
+const promptText = "(carlos@portfolio ~/Projects) $  cat project_welcome.txt; bash button.sh; ls *.project";
 const responseText = ">> Those are the public projects that i've worked on!. If any of them awakes your interest, just push the button and you will be redirected to his page:";
+const returnButtonText ="<RETURN HOME>";
 
 function createProjectButton(image_name, name, technologies, redirect_url) {
     fetch('/src/views/components/project_button.html')
@@ -58,6 +60,12 @@ export async function writeProjectPage(){
     await writeElement(terminalHeaderText, "terminalHeaderText");
     await writeElement(promptText, "promptText");
     await writeElement(responseText, "responseText");
+    document.getElementById("returnHomeButton").style.display = "flex";
+    writeElement(returnButtonText, "returnhometext");
+    document.getElementById("returnHomeButton").addEventListener("click", () =>{
+        show('home');
+    });
+
     createProjectButton("beer_with_no_background.png", "TPV Hosteler-a", ["Java Swing","MySQL"], "https://github.com/javiifu/Hosteler-a.git");
     await sleep(500);
     createProjectButton("vault_logo_with_no_background.png", "Vault", ["Web Design","Frontend"], "https://github.com/CarlosDZ/Vault.git");
@@ -69,5 +77,4 @@ export async function writeProjectPage(){
     createProjectButton("nodoLab_with_no_background.png", "nodoLab Coworking", ["Fullstack","PostgreSQL"], "https://github.com/patatavolc/nodoLab.git");
     await sleep(500);
     createProjectButton("nvim_with_no_background.png", "My Nvim Build", ["Lua","Config Files"], "https://github.com/patatavolc/nvim-personal-build.git");
-
 }
