@@ -136,6 +136,9 @@ h2{
 #boton_presionable_proyecto{
     position: relative;
 }
+#boton_presionable_proyecto:hover{
+    cursor: pointer;
+}
 #imagen_proyecto{
     position: absolute;
     top: -5px;
