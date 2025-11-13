@@ -48,7 +48,7 @@ export async function writeExperiencePage() {
         "Here I learned to use tools like Docker, Next.js, PHP and express, while strengthening previous knowledge on Git and Github.\nDuring this period I did also get familiar with MongoDB and how fullstack developments work, by making a test web about recipes, conecting it's backend to a MongoDB Atlas container and serving it with Vercel."
     );
     await sleep(500);
-    createWorkplace("Cesur Zaragoza", "(Septiembre 2024 - Present)", "Web App Development Student", 
+    createWorkplace("Cesur Zaragoza", "(September 2024 - Present)", "Web App Development Student", 
         "This is where im getting my degree on Web App Development. While studying here, I've worked on numerous projects and learned about technologies like MySQL, PostgreSQL, Docker, Apache, Nginx, Java, Javascript, HTML5, CSS, Web design, etc... \nStuding here has also brough me the opportunity of working on projects as a team, usually with platforms like Github and Linear."
     );
 }
