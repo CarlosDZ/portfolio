@@ -19,7 +19,7 @@ export function createWorkplace(name, time, position, description) {
         workplace_container.querySelector("#workplace_position").textContent = position;
         workplace_container.querySelector("#workplace_description").textContent = description;
 
-        document.getElementById("experience_area").appendChild(projectSection);
+        document.getElementById("experience_area").appendChild(workplace_container);
     })
     .catch(err => console.log("Error creating the experience section:", err));
 }
@@ -34,15 +34,15 @@ export async function writeExperiencePage() {
         show('home');
     });
 
+    createWorkplace("Recambios Belizon", "(July 2025 - Present)", "IT", 
+        "Here I was in charge of digitizing inventories and the accounting of the company, working with the program ISI Parts (A standard among vehicle spare parts distribution companies).\nI did also learn some offimatic skills like using Excel on an advanced level (Formulas, Power Query, etc...) and device and network administration. Working here i developped an app to help employees search on a provider database using keywords, brand names, etc... On top of that, I deployed the application in different devices using enviroment variables and I deployed a centralized MySQL database on the company's server, where this application's data is stored. Right now, I'm focushing more on my studies and personal projects, but I still help with maintenance and administration tasks punctually."
+    );
+    await sleep(500);
     createWorkplace("CodeArts Solutions", "(February 2025 - March 2025)", "Student on practices", 
         "Here I learned to use tools like Docker, Next.js, PHP and express, while strengthening previous knowledge on Git and Github.\nDuring this period I did also get familiar with MongoDB and how fullstack developments work, by making a test web about recipes, conecting it's backend to a MongoDB Atlas container and serving it with Vercel."
     );
     await sleep(500);
     createWorkplace("Cesur Zaragoza", "(Septiembre 2024 - Present)", "Web App Development Student", 
         "This is where im getting my degree on Web App Development. While studying here, I've worked on numerous projects and learned about technologies like MySQL, PostgreSQL, Docker, Apache, Nginx, Java, Javascript, HTML5, CSS, Web design, etc... \nStuding here has also brough me the opportunity of working on projects as a team, usually with platforms like Github and Linear."
-    );
-    await sleep(500);
-    createWorkplace("Recambios Belizon", "(July 2025 - Present)", "IT", 
-        "Here I was in charge of digitize inventories and the accounting of the company working with the program ISI Parts (A standard among vehicle spare parts distribution companies).\nI did also learn some offimatic skills like using Excel on an advanced level (Formulas, Power Query, etc...) and device and network administration. Working here i developped an app to help employees search on a provider database uwing keywords, brand names, etc... On top of that, I deployed the application in different devices using enviroment variables and I deployed a centralized MySQL database on the company's server, where this application data is stored. Right now, I'm focushing more on my studies and personal projects, but I still help with maintenance and administration tasks punctually."
     );
 }

@@ -177,3 +177,22 @@ h2{
         padding: 0;
     }
 }
+
+.workplace_container{
+    #workplace_name{
+        font-size: 3rem;
+    }
+    #workplace_time{
+        margin-left:1.5% ;
+        font-size: 2rem;
+    }
+    #workplace_position{
+        text-align: left;
+    }
+    .workplace_separator{
+        color: var(--terminal-text);
+    }
+}
+#experience_area{
+    margin-bottom: 8rem;
+}
