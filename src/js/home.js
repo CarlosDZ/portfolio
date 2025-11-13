@@ -5,7 +5,7 @@ const responseText = ">> Hi! Im Carlos Delgado and this is my portfolio. Feel fr
 const opt1Text = ">>> About me";
 const opt2Text = ">>> Projects";
 const opt3Text = ">>> Experience";
-const opt4Text = ">>> Technologies";
+const opt4Text = ">>> Tech Stack";
 const opt5Text = ">>> Contact";
 
 import {sleep, writeElement} from './utils/prompt_writer.js';
@@ -21,6 +21,10 @@ export async function writeHomePage() {
     await writeElement(responseText, "responseText");
     await sleep(200);
     await writeElement(opt1Text, "opt1Text");
+    const boton1 = document.getElementById("boton_para_ir_a_about_me");
+    boton1.addEventListener("click", () => {
+        show("about_me");
+    });
 
     await writeElement(opt2Text, "opt2Text");
     const boton2 = document.getElementById("boton_para_ir_a_proyectos");

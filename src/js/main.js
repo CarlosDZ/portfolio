@@ -1,3 +1,4 @@
+import { writeAboutMePage } from './about_me.js';
 import { writeExperiencePage } from './experience.js';
 import {writeHomePage} from './home.js';
 import { writeProjectPage } from './projects.js';
@@ -34,6 +35,9 @@ export function show(view) {
         }
         else if(view === "experience"){
             writeExperiencePage();
+        }
+        else if(view === "about_me"){
+            writeAboutMePage();
         }
     })
     .catch(err => console.log("Error loading view:", err));

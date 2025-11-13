@@ -196,3 +196,14 @@ h2{
 #experience_area{
     margin-bottom: 8rem;
 }
+
+.aboutme_separator{
+    color: var(--terminal-text);
+    display: none;
+}
+#yapping_area{
+    h2{
+        font-size: 3rem;
+    }
+    margin-bottom: 8rem;
+}

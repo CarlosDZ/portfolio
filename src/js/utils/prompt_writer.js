@@ -16,6 +16,22 @@ export const writeElement = (text, elementID) => {
     });
 }
 
+export const writeElement_withSpeed = (text, elementID, speed) => {
+    return new Promise((resolve) => {
+        let i = 0;
+        const elemento = document.getElementById(elementID);
+
+        const interval = setInterval(() => {
+        elemento.innerHTML += text.charAt(i);
+        i++;
+        if (i >= text.length) {
+            clearInterval(interval);
+            resolve();
+        }
+        }, speed);
+    });
+}
+
 export const writeElement_withElementAsAnEntry = (text, elemento) => {
     return new Promise((resolve) => {
         let i = 0;
