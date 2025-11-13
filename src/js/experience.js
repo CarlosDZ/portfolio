@@ -1,9 +1,10 @@
 const terminalHeaderText = "<CarlosDZ's Console>";
-const promptText = "(carlos@portfolio ~/Experience) $  cat experience_welcome.txt; bash button.sh; ls *.experience";
+const consoleUser = "(carlos@portfolio ~/Experience) $ ";
+const promptText = "cat experience_welcome.txt; bash button.sh; ls *.experience";
 const responseText = ">> Here are the places that i've worked and studied on. On addition to this, I have worked on a lot of personal projects that you can se on the <PROJECTS> section.";
 const returnButtonText ="<RETURN HOME>";
 
-import {writeElement, sleep} from './utils/prompt_writer.js';
+import {writeElement, sleep, writeElement_withElementAsAnEntry, writeElement_withElementAsAnEntry_selectSpeed} from './utils/prompt_writer.js';
 import { show } from './main.js';
 
 export function createWorkplace(name, time, position, description) {
@@ -14,10 +15,11 @@ export function createWorkplace(name, time, position, description) {
         const doc = parser.parseFromString(html, "text/html");
         const workplace_container = doc.querySelector(".workplace_container");
 
-        workplace_container.querySelector("#workplace_name").textContent = name;
-        workplace_container.querySelector("#workplace_time").textContent = time;
-        workplace_container.querySelector("#workplace_position").textContent = position;
-        workplace_container.querySelector("#workplace_description").textContent = description;
+        writeElement_withElementAsAnEntry(position, workplace_container.querySelector('#workplace_position'));
+        writeElement_withElementAsAnEntry_selectSpeed(description, workplace_container.querySelector('#workplace_description'), 8);
+
+        writeElement_withElementAsAnEntry(name, workplace_container.querySelector('#workplace_name'));
+        writeElement_withElementAsAnEntry(time, workplace_container.querySelector('#workplace_time'));
 
         document.getElementById("experience_area").appendChild(workplace_container);
     })
@@ -25,9 +27,13 @@ export function createWorkplace(name, time, position, description) {
 }
 
 export async function writeExperiencePage() {
-    await writeElement(terminalHeaderText, "terminalHeaderText");
+    document.getElementById("terminalHeaderText").textContent = terminalHeaderText;
+    document.getElementById("promptText").textContent = consoleUser;
+    await sleep(500);
     await writeElement(promptText, "promptText");
+    await sleep(300);
     await writeElement(responseText, "responseText");
+    await sleep(200);
     document.getElementById("returnHomeButton").style.display = "flex";
     writeElement(returnButtonText, "returnhometext");
     document.getElementById("returnHomeButton").addEventListener("click", () =>{

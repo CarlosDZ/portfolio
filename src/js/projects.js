@@ -6,7 +6,8 @@ import {writeElement, sleep} from './utils/prompt_writer.js';
 import { show } from './main.js';
 
 const terminalHeaderText = "<CarlosDZ's Console>";
-const promptText = "(carlos@portfolio ~/Projects) $  cat project_welcome.txt; bash button.sh; ls *.project";
+const consoleUser = "(carlos@portfolio ~/Projects) $  ";
+const promptText = "cat project_welcome.txt; bash button.sh; ls *.project";
 const responseText = ">> Those are the public projects that i've worked on!. If any of them awakes your interest, just push the button and you will be redirected to his page:";
 const returnButtonText ="<RETURN HOME>";
 
@@ -55,9 +56,15 @@ function createProjectButton(image_name, name, technologies, redirect_url) {
 
 
 export async function writeProjectPage(){
-    await writeElement(terminalHeaderText, "terminalHeaderText");
+    document.getElementById("terminalHeaderText").textContent = terminalHeaderText;
+    document.getElementById("promptText").textContent = consoleUser;
+    await sleep(500);
     await writeElement(promptText, "promptText");
+    await sleep(300);
     await writeElement(responseText, "responseText");
+    await sleep(200);
+
+    
     document.getElementById("returnHomeButton").style.display = "flex";
     writeElement(returnButtonText, "returnhometext");
     document.getElementById("returnHomeButton").addEventListener("click", () =>{

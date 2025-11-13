@@ -1,5 +1,6 @@
 const terminalHeaderText = "<CarlosDZ's Console>";
-const promptText = "(carlos@portfolio ~) $  cat welcome.txt";
+const consoleUser = "(carlos@portfolio ~) $ ";
+const promptText = "cat welcome.txt";
 const responseText = ">> Hi! Im Carlos Delgado and this is my portfolio. Feel free to navigate through the following sections:";
 const opt1Text = ">>> About me";
 const opt2Text = ">>> Projects";
@@ -7,14 +8,18 @@ const opt3Text = ">>> Experience";
 const opt4Text = ">>> Technologies";
 const opt5Text = ">>> Contact";
 
-import {writeElement} from './utils/prompt_writer.js';
+import {sleep, writeElement} from './utils/prompt_writer.js';
 import { writeProjectPage } from './projects.js';
 import {show} from './main.js';
 
 export async function writeHomePage() {
-    await writeElement(terminalHeaderText, "terminalHeaderText");
+    document.getElementById("terminalHeaderText").textContent = terminalHeaderText;
+    document.getElementById("promptText").textContent = consoleUser;
+    await sleep(500);
     await writeElement(promptText, "promptText");
+    await sleep(300);
     await writeElement(responseText, "responseText");
+    await sleep(200);
     await writeElement(opt1Text, "opt1Text");
 
     await writeElement(opt2Text, "opt2Text");
