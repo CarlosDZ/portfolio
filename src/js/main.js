@@ -2,7 +2,7 @@ import { writeAboutMePage } from './about_me.js';
 import { writeExperiencePage } from './experience.js';
 import {writeHomePage} from './home.js';
 import { writeProjectPage } from './projects.js';
-
+import { writeTechStackPage } from './tech_stack.js';
 
 const images_to_precharge = [
     '/public/imgs/projects/beer_with_no_background.png',
@@ -38,6 +38,9 @@ export function show(view) {
         }
         else if(view === "about_me"){
             writeAboutMePage();
+        }
+        else if(view === "tech_stack"){
+            writeTechStackPage();
         }
     })
     .catch(err => console.log("Error loading view:", err));

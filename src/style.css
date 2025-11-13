@@ -207,3 +207,18 @@ h2{
     }
     margin-bottom: 8rem;
 }
+
+#tech_stack_area{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 2rem;
+    margin-bottom: 8rem;
+
+    h4{
+        font-size: 1.7rem;
+    }
+    li{
+        list-style-type: none;
+        font-size: 1.5rem;
+    }
+}

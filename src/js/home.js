@@ -39,5 +39,10 @@ export async function writeHomePage() {
     });
 
     await writeElement(opt4Text, "opt4Text");
+    const boton4 = document.getElementById("boton_para_ir_a_tech_stack");
+    boton4.addEventListener("click", () => {
+        show("tech_stack");
+    });
+    
     await writeElement(opt5Text, "opt5Text");
 }
