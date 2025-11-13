@@ -75,7 +75,7 @@ export async function writeProjectPage(){
     await sleep(500);
     createProjectButton("vault_logo_with_no_background.png", "Vault", ["Web Design","Frontend"], "https://github.com/CarlosDZ/Vault.git");
     await sleep(500);
-    createProjectButton("magic_card_with_no_background.png", "Spain cEDH (TFG)", ["Fullstack","MongoDB"], "https://github.com/CarlosDZ/TFG-Web-cEDH.git");
+    createProjectButton("magic_card_with_no_background.png", "Spain cEDH (Thesis Porject)", ["Fullstack","MongoDB"], "https://github.com/CarlosDZ/TFG-Web-cEDH.git");
     await sleep(500);
     createProjectButton("magnifying_glass_with_no_background.png", "Buscador de proveedores", ["Java Swing","MySQL"], "https://github.com/CarlosDZ/buscador_proveedores_belizon.git");
     await sleep(500);
