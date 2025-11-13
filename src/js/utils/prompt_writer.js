@@ -1,4 +1,4 @@
-const typingSpeed = 22; //ms
+const typingSpeed = 16; //ms
 
 export const writeElement = (text, elementID) => {
     return new Promise((resolve) => {
@@ -14,4 +14,8 @@ export const writeElement = (text, elementID) => {
         }
         }, typingSpeed);
     });
+}
+
+export function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
 }

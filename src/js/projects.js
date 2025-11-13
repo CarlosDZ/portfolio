@@ -2,7 +2,7 @@ const unpressed_button_image = '/public/imgs/projects/unpressed_button_with_back
 const pressed_button_image = '/public/imgs/projects/pressed_button_with_background.png';
 const images_route = '/public/imgs/projects/';
 
-import {writeElement} from './utils/prompt_writer.js';
+import {writeElement, sleep} from './utils/prompt_writer.js';
 import { show } from './main.js';
 
 const terminalHeaderText = "<CarlosDZ's Console>";
@@ -52,9 +52,7 @@ function createProjectButton(image_name, name, technologies, redirect_url) {
     })
     .catch(err => console.log("Error creating project button:", err));
 }
-function sleep(ms) {
-  return new Promise(resolve => setTimeout(resolve, ms));
-}
+
 
 export async function writeProjectPage(){
     await writeElement(terminalHeaderText, "terminalHeaderText");

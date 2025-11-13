@@ -18,12 +18,17 @@ export async function writeHomePage() {
     await writeElement(opt1Text, "opt1Text");
 
     await writeElement(opt2Text, "opt2Text");
-    const boton = document.getElementById("boton_para_ir_a_proyectos");
-    boton.addEventListener("click", () => {
+    const boton2 = document.getElementById("boton_para_ir_a_proyectos");
+    boton2.addEventListener("click", () => {
         show("projects");
     });
 
     await writeElement(opt3Text, "opt3Text");
+    const boton3 = document.getElementById("boton_para_ir_a_experiencia");
+    boton3.addEventListener("click", () => {
+        show("experience");
+    });
+
     await writeElement(opt4Text, "opt4Text");
     await writeElement(opt5Text, "opt5Text");
 }

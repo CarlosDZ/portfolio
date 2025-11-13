@@ -50,7 +50,7 @@ h2{
     }
 }
 
-#projects{
+.view{
     background-color: var(--terminal-background);
     h3{
         text-align: center;
