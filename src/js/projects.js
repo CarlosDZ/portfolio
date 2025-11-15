@@ -81,5 +81,5 @@ export async function writeProjectPage(){
     await sleep(500);
     createProjectButton("nodoLab_with_no_background.png", "nodoLab Coworking", ["Fullstack","PostgreSQL"], "https://github.com/patatavolc/nodoLab.git");
     await sleep(500);
-    createProjectButton("nvim_with_no_background.png", "My Nvim Build", ["Lua","Config Files"], "https://github.com/patatavolc/nvim-personal-build.git");
+    createProjectButton("nvim_with_no_background.png", "My Nvim Build", ["Lua","Config Files"], "https://github.com/CarlosDZ/nvim-personal-build.git");
 }
