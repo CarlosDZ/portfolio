@@ -223,3 +223,49 @@ h2{
         font-size: 1.5rem;
     }
 }
+
+#botones_contacto_area{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    a{
+        text-decoration: none;
+    }
+}
+
+.container_boton_contacto{
+    height: 35%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    a{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40%;
+    }
+}
+.botonContactoStyle{
+    background-color: var(--terminal-background);
+    color: var(--terminal-text);
+    font-size: 6rem;
+    text-decoration: none;
+    border: solid 2px var(--terminal-text);
+    text-align: center;
+    width: 100%;
+    transform: scale(1);
+}
+
+.botonContactoStyle:hover:active{
+    transform: scale(0.9);
+}
+
+#app{
+    height: 100vh;
+}
+#contact{
+    height: 100%;
+}

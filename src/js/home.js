@@ -45,4 +45,8 @@ export async function writeHomePage() {
     });
     
     await writeElement(opt5Text, "opt5Text");
+    const boton5 = document.getElementById("boton_para_ir_a_contacto");
+    boton5.addEventListener("click", () => {
+        show("contact");
+    });
 }
